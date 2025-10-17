@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Interface</title>
+    <style>
+        body {
+            flex-direction: column;
+			gap: 20px;
+			font-family: "Times New Roman", sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200vh;
+            margin: 0;
+            background-color: #febb5a;
+        }
+        #chat-container, #surveyntests {
+            width: 1000px;
+            background-color: #ffffff;
+            padding: 20px;
+            border: 2px solid #009688;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-family: "Times New Roman", sans-serif;
+            text-align: center;
+        }
+        #user-input, #chatbot-response, #textdesc {
+            width: 98%;
+            border: 1px solid #009688;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            font-family: "Times New Roman", sans-serif;
+        }
+        #user-input {
+            height: 80px;
+            font-family: "Times New Roman", sans-serif;
+        }
+        #chatbot-response {
+            height: 100px;
+            overflow-y: auto;
+            background-color: #f5f5f5;
+            font-family: "Times New Roman", sans-serif;
+        }
+        #send-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #80deea;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            color: #00695c;
+            cursor: pointer;
+            font-family: "Times New Roman", sans-serif;
+        }
+        #send-button:hover {
+            background-color: #4dd0e1;
+            font-family: "Times New Roman", sans-serif;
+        }
+        #personality-select {
+            margin-bottom: 10px;
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #009688;
+            font-size: 16px;
+            font-family: "Times New Roman", sans-serif;
+        }
+		#surveyntests a {
+			display: inline-block;
+			margin: 10px 5px;
+			color: #3252a8;
+            width: 50%;
+            text-align: center;
+			font-weight: bold;
+			border: 1px solid #006988;
+			padding: 8px 12px;
+			border-radius: 5px;
+			background-color: #04d9ff:
+            font-family: "Times New Roman", sans-serif;
+		}
+    </style>
+</head>
+<body>
+    <div id="chat-container">
+		<h1>Construct Machine Learning: Create a Chatbot!</h1>
+		<p>Hello, welcome to Construct ML :)
+		<br>In this app, you can personalize and create your own ChatGPT AI chatbot!
+		<br>Make sure to try to set personality traits of the chatbot,
+		<br>such as how smart it is, how it speaks to you, and the way it acts.
+		<br>Ask it questions and chat with it.
+		<br>The goal is to understand how your chatbot will process data.
+		<br>Have fun and learn AI!</p>
+        <br>
+		<p>Please select a chatbot personality from the dropdown.</p>
+        <select id="personality-select">
+            <option value="friendly">Friendly</option>
+            <option value="serious">Professional</option>
+            <option value="funny">Funny</option>
+			<option value="sad">Sad</option>
+			<option value="happy">Happy</option>
+			<option value="scared">Scared</option>
+        </select>
+		<textarea id="textdesc" placeholder="Enter a personality, chatbot name, or leave it blank if you don't want to. Describe your bot!"></textarea>
+        <p>Here, type in text and press the send button to send a message to your chatbot.</p>
+        <textarea id="user-input" placeholder="Type a message and press 'Send'..."></textarea>
+        <br>
+		<button id="send-button" onclick="sendMessage()">Send</button>
+		<br>
+        <br>
+        <div id="chatbot-response">Hello! How can I help you today?</div>
+    </div>
+		<br></br>
+		<div id="surveyntests">
+			<h1>Please click on these links only when we tell you to! :)</h1>
+			<a href="https://forms.gle/UpAHKAPZSZbmvRJG7" target="_blank">Survey</a>
+			<a href="https://forms.gle/npbXFTibghX1ZpcA6" target="_blank">Test</a>
+    </div>
+
+    <script src="chatbot.js"></script>
+</body>
+</html>
